@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geospatial ML Pipeline Visualizer</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="sidebar">
+            <h1>Geospatial ML Visualizer</h1>
+            
+            <div class="control-group">
+                <label for="building-select">Select Building:</label>
+                <select id="building-select">
+                    <option value="">Loading...</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <h3>Visualization Options</h3>
+                <label>
+                    <input type="checkbox" id="show-raster" checked>
+                    Show Raster Image
+                </label>
+                <label>
+                    <input type="checkbox" id="show-buildings" checked>
+                    Show Building Polygons
+                </label>
+                <label>
+                    <input type="checkbox" id="show-entrances" checked>
+                    Show Entrances
+                </label>
+                <label>
+                    <input type="checkbox" id="show-gps" checked>
+                    Show GPS Traces
+                </label>
+                <label>
+                    <input type="checkbox" id="show-predictions" disabled>
+                    Show Model Predictions
+                </label>
+            </div>
+            
+            <div class="control-group">
+                <h3>Model Prediction</h3>
+                <select id="model-select" disabled>
+                    <option value="">No models available</option>
+                </select>
+                <button id="run-prediction" disabled>Run Prediction</button>
+            </div>
+            
+            <div id="info-panel">
+                <h3>Information</h3>
+                <div id="info-content">
+                    Select a building to view details
+                </div>
+            </div>
+        </div>
+        
+        <div id="map"></div>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+</html>

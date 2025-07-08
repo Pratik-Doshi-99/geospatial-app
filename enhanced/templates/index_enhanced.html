@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geospatial ML Pipeline - Advanced Visualizer</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="/static/style_enhanced.css">
+</head>
+<body>
+    <div id="app">
+        <div id="sidebar">
+            <h1>🗺️ Geospatial ML Visualizer</h1>
+            
+            <div class="control-group">
+                <label for="building-select">Select Building:</label>
+                <select id="building-select">
+                    <option value="">Loading...</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <h3>📍 Visualization Layers</h3>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="show-raster" checked>
+                    <span>Satellite Imagery</span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="show-buildings" checked>
+                    <span>Building Footprints</span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="show-entrances" checked>
+                    <span>Ground Truth Entrances</span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="show-gps" checked>
+                    <span>GPS Traces</span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="show-predictions" disabled>
+                    <span>Model Predictions</span>
+                </label>
+            </div>
+            
+            <div class="control-group">
+                <h3>🤖 Model Prediction</h3>
+                <select id="model-select" disabled>
+                    <option value="">No models available</option>
+                </select>
+                <button id="run-prediction" class="primary-button" disabled>
+                    Run Prediction
+                </button>
+                <div id="model-info" class="info-box"></div>
+            </div>
+            
+            <div id="info-panel" class="info-panel">
+                <h3>📊 Statistics</h3>
+                <div id="info-content">
+                    Select a building to view details
+                </div>
+            </div>
+            
+            <div id="legend" class="legend">
+                <h3>Legend</h3>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #3388ff;"></span>
+                    Building Footprint
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #ff7800;"></span>
+                    Ground Truth Entrance
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #00ff00;"></span>
+                    Outdoor GPS
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #ff0000;"></span>
+                    Indoor GPS
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #ff00ff;"></span>
+                    Predicted Entrance
+                </div>
+            </div>
+        </div>
+        
+        <div id="map-container">
+            <div id="map"></div>
+            <div id="loading-overlay" class="loading-overlay hidden">
+                <div class="spinner"></div>
+                <p>Processing...</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/static/app_enhanced.js"></script>
+</body>
+</html>
