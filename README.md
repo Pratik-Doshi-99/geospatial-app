@@ -2,7 +2,7 @@
 
 ![App Demo](assets/demo_collage.png)
 
-A comprehensive machine learning pipeline that predicts building entrances from GPS traces, demonstrating skills in computer vision, multimodal learning, and geospatial data processing - aligned with Maps ML Engineer requirements.
+A comprehensive machine learning pipeline that predicts building entrances from GPS traces.
 
 ## 🏗️ System Architecture
 
@@ -17,11 +17,6 @@ This project implements a complete end-to-end pipeline:
 
 ## 🚀 Quick Start
 
-### Prerequisites
-
-- Python 3.8+
-- CUDA-capable GPU (optional, for faster training)
-- 2GB+ free disk space for data
 
 ### Installation
 
@@ -145,114 +140,8 @@ geospatial-ml-pipeline/
 - Model prediction interface
 - Real-time visualization updates
 
-## 📊 Model Performance
+## 📊 Model Performance - WIP
 
-The trained model achieves:
-- **Precision**: ~0.75-0.85 (varies by dataset)
-- **Recall**: ~0.70-0.80
-- **F1 Score**: ~0.72-0.82
 
-Performance depends on:
-- GPS trace density
-- Building complexity
-- Number of entrances
 
-## 🎯 Key Features Demonstrated
 
-### Technical Skills (Aligned with Job Requirements)
-- ✅ **Computer Vision**: Building segmentation from satellite imagery
-- ✅ **Multimodal Models**: Combining imagery, GPS, and geometric data
-- ✅ **PyTorch Expertise**: Custom model architecture and training
-- ✅ **Geospatial Processing**: Coordinate transformations, shapefiles
-- ✅ **Scalable Pipelines**: Modular design, batch processing
-- ✅ **Production Deployment**: Flask API with model serving
-
-### ML/AI Capabilities
-- ✅ **Vision Transformers**: Simulated ViT-style processing
-- ✅ **Multi-agent Systems**: GPS trace generation logic
-- ✅ **Feature Engineering**: Spatial histograms, Gaussian heatmaps
-- ✅ **Model Evaluation**: Comprehensive metrics and visualization
-
-## 🔍 Using the Visualization App
-
-1. **Select Building**: Choose from dropdown menu
-2. **Toggle Layers**:
-   - Satellite imagery (base layer)
-   - Building footprints (blue polygons)
-   - Ground truth entrances (orange circles)
-   - GPS traces (green=outdoor, red=indoor)
-   - Model predictions (purple circles)
-3. **Run Predictions**:
-   - Select a trained model
-   - Click "Run Prediction"
-   - View predicted entrance locations
-4. **Interact**:
-   - Click features for details
-   - Pan/zoom to explore
-   - Compare predictions vs ground truth
-
-## 🚧 Production Considerations
-
-### For Real Deployment:
-1. **Replace Simulated SAM**: Integrate actual `segment-anything` model
-2. **Scale Data Pipeline**: Use distributed processing (Spark/Dask)
-3. **Enhance Model**: 
-   - Use transformer architectures
-   - Add attention mechanisms
-   - Incorporate building imagery
-4. **Optimize Inference**: TensorRT/ONNX for faster predictions
-5. **Add Authentication**: Secure the Flask app
-6. **Deploy on Cloud**: Kubernetes for scalability
-
-### Performance Optimizations:
-- Batch processing for multiple buildings
-- GPU acceleration for segmentation
-- Caching for frequently accessed data
-- CDN for static assets
-
-## 🛠️ Troubleshooting
-
-### Common Issues:
-
-1. **Rate Limiting on Tile Downloads**
-   - Solution: Add delays or use local tile server
-   
-2. **Memory Issues with Large Datasets**
-   - Solution: Process in smaller batches
-   
-3. **Model Not Found**
-   - Solution: Ensure `train_model.py` completed successfully
-   
-4. **GPS Traces Missing**
-   - Solution: Check if entrances were generated first
-
-## 📈 Future Enhancements
-
-1. **Advanced Models**:
-   - Graph Neural Networks for spatial relationships
-   - Transformer-based trajectory modeling
-   - Multimodal fusion with building images
-
-2. **Better Simulation**:
-   - Real GPS noise patterns
-   - Time-of-day variations
-   - Multiple transportation modes
-
-3. **Enhanced UI**:
-   - 3D building visualization
-   - Heatmap overlays
-   - Comparative analysis tools
-
-## 📝 License
-
-This project is for demonstration purposes, showcasing ML engineering skills for geospatial applications.
-
-## 🤝 Acknowledgments
-
-- OpenStreetMap for tile data
-- Inspired by Apple Maps' arrival experience challenges
-- Built to demonstrate capabilities for Maps ML Engineer role
-
----
-
-**Note**: This is a demonstration project. In production, you would use actual SAM models, real GPS data (with privacy considerations), and more sophisticated ML architectures.
