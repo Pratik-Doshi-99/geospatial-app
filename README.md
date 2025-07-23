@@ -1,5 +1,7 @@
 # Geospatial ML Pipeline for Building Entrance Prediction
 
+![App Demo](assets/demo_collage.png)
+
 A comprehensive machine learning pipeline that predicts building entrances from GPS traces, demonstrating skills in computer vision, multimodal learning, and geospatial data processing - aligned with Maps ML Engineer requirements.
 
 ## 🏗️ System Architecture
