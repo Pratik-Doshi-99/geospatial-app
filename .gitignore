@@ -210,3 +210,7 @@ __marimo__/
 
 data/*
 *.logs
+
+# App runtime files
+logs.txt
+app.pid

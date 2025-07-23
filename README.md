@@ -38,6 +38,32 @@ mkdir -p models
 mkdir -p templates static
 ```
 
+### Server Installation (Quick Setup)
+
+If you just want to run the web server without going through the full pipeline:
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd geospatial-app
+
+# Create and activate virtual environment
+python -m venv ../env
+source ../env/bin/activate  # On Windows: ..\env\Scripts\activate
+
+# Install server dependencies
+pip install -r server_requirements.txt
+
+# Run the app
+python app_updated.py
+# Access at http://localhost:5000
+
+# Or run in background with logging
+chmod +x run_app.sh
+./run_app.sh
+# View logs: tail -f logs.txt
+```
+
 ### Running the Pipeline
 
 Execute each step in order:
